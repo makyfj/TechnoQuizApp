@@ -1,6 +1,10 @@
 # TECHNO QUIZ APP
 
-### I love techno music and decided to incorporate techno to react :)
+### I love techno music and decided to incorporate techno to my react learning process :)
+
+![alt website-1](https://github.com/makyfj/TechnoQuizApp/blob/main/public/techno-1.png?raw=true)
+![alt website-1](https://github.com/makyfj/TechnoQuizApp/blob/main/public/techno-2.png?raw=true)
+![alt website-1](https://github.com/makyfj/TechnoQuizApp/blob/main/public/techno-3.png?raw=true)
 
 # Getting Started with Create React App
 
