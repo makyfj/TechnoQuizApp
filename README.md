@@ -1,3 +1,7 @@
+# TECHNO QUIZ APP
+
+### I love techno music and decided to incorporate techno to react :)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,38 +1,45 @@
-.App {
+.App h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.questionDisplay {
+  margin: 12px;
+  background: #ccc;
+  border: 2px solid #ddd;
+  padding: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.question {
+  font-weight: bold;
+  text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.buttonContainer {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.questionChoice {
+  padding: 12px;
+  margin: 12px;
+  height: 5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.resultCorrect,
+.resultIncorrect {
+  text-align: center;
+}
+
+.resultCorrect {
+  color: green;
+}
+
+.resultIncorrect {
+  color: red;
+}
+
+.playerScore {
+  text-align: center;
+  font-weight: bold;
 }
