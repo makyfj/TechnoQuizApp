@@ -71,6 +71,12 @@ class App extends Component {
     return <p className="playerScore">{`Player score: ${playerScore}`}</p>;
   }
 
+  renderQuestions() {
+    return this.state.questions.map((question, index) =>
+      this.displayQuestion(index)
+    );
+  }
+
   displayQuestion(index) {
     if (this.state.playerScore < index) {
       return;
@@ -79,27 +85,19 @@ class App extends Component {
     const question = this.state.questions[index];
 
     return (
-      <div className="questionDisplay">
+      <div className="questionDisplay" key={`q-${index}`}>
         <p className="question">{question.question}</p>
         <br />
         <div className="buttonContainer">
-          <button
-            className="questionChoice"
-            onClick={() =>
-              this.answerQuestion(index, question.possibleAnswers[0])
-            }
-          >
-            {question.possibleAnswers[0]}
-          </button>
-
-          <button
-            className="questionChoice"
-            onClick={() =>
-              this.answerQuestion(index, question.possibleAnswers[1])
-            }
-          >
-            {question.possibleAnswers[1]}
-          </button>
+          {question.possibleAnswers.map((answer, answerIndex) => (
+            <button
+              key={`q-${index}-a-${answerIndex}`}
+              className="questionChoice"
+              onClick={() => this.answerQuestion(index, answer)}
+            >
+              {answer}
+            </button>
+          ))}
         </div>
         <br />
         {this.displayResult(index)}
@@ -112,10 +110,7 @@ class App extends Component {
       <div className="App">
         <h1>Techno Quiz App</h1>
         <hr />
-        {this.displayQuestion(0)}
-        {this.displayQuestion(1)}
-        {this.displayQuestion(2)}
-        {this.displayQuestion(3)}
+        {this.renderQuestions()}
         {this.displayScore()}
       </div>
     );
